@@ -1,88 +1,115 @@
 import React, { useState } from 'react';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+// I'm using a simple functional component for the contact page
+const ContactPage = () => {
+  // State to handle the form inputs
+  const [formData, setFormData] = useState({
+    userName: '',
+    userEmail: '',
+    userMessage: ''
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Thank you for contacting KSPCA. We will get back to you soon!');
+  // This function runs when the user clicks 'Submit'
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // For now, just logging to console to make sure it works
+    console.log("Form submitted by:", formData.userName);
+    alert('Thanks for reaching out! Someone from PW will get back to you.');
+    
+    // Clear the form after sending
+    setFormData({ userName: '', userEmail: '', userMessage: '' });
   };
 
   return (
-    <div className="bg-white font-sans text-gray-800">
-      {/* Header */}
-      <section className="bg-orange-500 text-white py-16 px-6 text-center">
-        <h1 className="text-4xl font-bold">Contact Us</h1>
-        <p className="mt-2 text-lg">Reach out to Kenya’s animal welfare team</p>
-      </section>
+    <div className="contact-container font-sans">
+      {/* Page Header - styled with PW brand colors */}
+      <header className="bg-orange-500 p-12 text-center text-white">
+        <h1 className="text-4xl font-extrabold uppercase tracking-wide">Contact Us</h1>
+        <p className="text-lg mt-2 italic">Help us protect Kenya's animals</p>
+      </header>
 
-      <div className="max-w-6xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-12">
-        {/* Contact Form */}
-        <section>
-          <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium mb-1">Full Name</label>
+      {/* Main content area splits into Form and Info */}
+      <main className="max-w-5xl mx-auto my-12 px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        {/* Left Side: The Form */}
+        <div className="form-section bg-white p-6 shadow-md rounded-lg border border-gray-200">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-700">Send us a message</h2>
+          
+          <form onSubmit={handleFormSubmit} className="flex flex-col gap-4">
+            <label className="flex flex-col">
+              <span className="text-sm font-bold text-gray-600 mb-1">Your Name:</span>
               <input 
                 type="text" 
-                className="w-full border p-3 rounded-md focus:ring-2 focus:ring-green-500" 
+                placeholder="Enter your full name"
+                className="border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-green-600"
+                value={formData.userName}
+                onChange={(e) => setFormData({...formData, userName: e.target.value})}
                 required 
               />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1">Email Address</label>
+            </label>
+
+            <label className="flex flex-col">
+              <span className="text-sm font-bold text-gray-600 mb-1">Email Address:</span>
               <input 
                 type="email" 
-                className="w-full border p-3 rounded-md focus:ring-2 focus:ring-green-500" 
+                placeholder="example@mail.com"
+                className="border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-green-600"
+                value={formData.userEmail}
+                onChange={(e) => setFormData({...formData, userEmail: e.target.value})}
                 required 
               />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-1">Message</label>
+            </label>
+
+            <label className="flex flex-col">
+              <span className="text-sm font-bold text-gray-600 mb-1">Message:</span>
               <textarea 
-                rows="5" 
-                className="w-full border p-3 rounded-md focus:ring-2 focus:ring-green-500" 
+                rows="4" 
+                placeholder="How can we help?"
+                className="border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-green-600"
+                value={formData.userMessage}
+                onChange={(e) => setFormData({...formData, userMessage: e.target.value})}
                 required
               ></textarea>
-            </div>
-            <button className="bg-green-700 text-white px-8 py-3 rounded-md font-bold hover:bg-green-800 transition">
-              Submit Request
+            </label>
+
+            <button 
+              type="submit" 
+              className="bg-green-600 text-white font-bold py-3 px-6 rounded hover:bg-green-700 transition duration-300"
+            >
+              Send Message
             </button>
           </form>
-        </section>
+        </div>
 
-        {/* Office Details */}
-        <section className="space-y-8">
+        {/* Right Side: Office Details */}
+        <div className="info-section space-y-6">
           <div>
-            <h2 className="text-2xl font-bold mb-4">Quick Contacts</h2>
-            <p className="mb-2"><strong>Phone:</strong> +254 (0) 709 007 500</p>
-            <p className="mb-2"><strong>Email:</strong> info@kspca.or.ke</p>
-            <p className="mb-2"><strong>Adoptions:</strong> rehoming@kspca.or.ke</p>
-            <p><strong>Hours:</strong> Mon - Sat, 9am – 5pm</p>
+            <h2 className="text-2xl font-bold text-gray-800 underline decoration-green-500">How to Find Us</h2>
+            <p className="mt-4 text-gray-600">
+              Our main headquarters are in Karen, but we have branches all over the country. 
+              Feel free to call our emergency line for rescues.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="p-4 border rounded-md">
-              <h3 className="font-bold text-green-700">Nairobi</h3>
-              <p className="text-sm">Langata Road, Karen</p>
-            </div>
-            <div className="p-4 border rounded-md">
-              <h3 className="font-bold text-green-700">Naivasha</h3>
-              <p className="text-sm">Moi Southlake Rd, Karagita</p>
-            </div>
-            <div className="p-4 border rounded-md">
-              <h3 className="font-bold text-green-700">Mombasa</h3>
-              <p className="text-sm">Malindi Road, Nyali</p>
-            </div>
-            <div className="p-4 border rounded-md">
-              <h3 className="font-bold text-green-700">Nanyuki</h3>
-              <p className="text-sm">Nanyuki Town, Laikipia</p>
-            </div>
+          <div className="contact-details bg-gray-50 p-5 rounded border-l-4 border-orange-500">
+            <p><strong>📞 Phone:</strong> +254 (0) 709 007 500</p>
+            <p className="my-2"><strong>✉️ General Email:</strong> info@pw.or.ke</p>
+            <p><strong>⏰ Hours:</strong> Mon-Sat (9:00 AM - 5:00 PM)</p>
           </div>
-        </section>
-      </div>
+
+          <div className="branches">
+            <h3 className="font-bold text-lg mb-3">Regional Branches:</h3>
+            <ul className="grid grid-cols-2 gap-3 text-sm">
+              <li className="bg-white p-2 border border-gray-200">📍 Nairobi (HQ)</li>
+              <li className="bg-white p-2 border border-gray-200">📍 Naivasha</li>
+              <li className="bg-white p-2 border border-gray-200">📍 Mombasa</li>
+              <li className="bg-white p-2 border border-gray-200">📍 Nanyuki</li>
+            </ul>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
 
-export default Contact;
+export default ContactPage;
