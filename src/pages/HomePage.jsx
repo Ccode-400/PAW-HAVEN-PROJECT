@@ -103,3 +103,15 @@ const featuredPets = [
         </div>
         <Link to="/adopt-now">See All Adoptable Pets</Link>
       </section>
+      {/* Join the Community Section */}
+      <section>
+        <h2>Join the Paw Haven Community</h2>
+        <p>
+          Get the latest news, available adoptable pets, upcoming events, and more
+          delivered straight to your inbox.
+        </p>
+        <form onSubmit={(e) => e.preventDefault()}>
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
