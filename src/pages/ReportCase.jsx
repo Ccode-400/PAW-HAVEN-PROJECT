@@ -14,3 +14,12 @@ function ReportCase() {
         <textarea
           placeholder="Describe the incident"
         ></textarea>
+
+        <button type="submit">
+          Submit Report
+        </button>
+      </form>
+    </div>
+  );
+}
+
