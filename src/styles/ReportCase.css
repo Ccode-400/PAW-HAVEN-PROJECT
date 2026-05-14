@@ -10,3 +10,10 @@
   margin-bottom: 30px;
   font-size: 40px;
 }
+
+.report-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
