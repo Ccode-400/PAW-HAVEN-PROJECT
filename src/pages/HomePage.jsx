@@ -1,6 +1,16 @@
+import { Link } from "react-router-dom";
+import PetCard from "../components/PetCard";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 function HomePage() {
   return (
-    <div>
+    
+      <div>
+      <Navbar />
+
+        {/* ... all your sections ... */}
+
+      <Footer />
     </div>
   );
 }
@@ -115,3 +125,4 @@ const featuredPets = [
           <button type="submit">Subscribe</button>
         </form>
       </section>
+
