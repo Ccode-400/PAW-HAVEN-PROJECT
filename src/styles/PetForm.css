@@ -1,0 +1,40 @@
+.pet-form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.pet-form h2 {
+  color: #1d4ed8;
+  margin-bottom: 20px;
+}
+
+.pet-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.pet-form button {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.pet-form button:hover {
+  background-color: #1e40af;
+}
