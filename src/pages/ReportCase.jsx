@@ -24,3 +24,5 @@ function ReportCase() {
     </div>
   );
 }
+
+export default ReportCase;
