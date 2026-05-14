@@ -23,3 +23,4 @@ function ReportCase() {
   );
 }
 
+export default ReportCase;
