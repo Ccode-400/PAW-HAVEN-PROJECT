@@ -4,4 +4,16 @@ function ReportCase() {
       <h1 className="text-4xl font-bold mb-6 text-center">
         Report Animal Cruelty
       </h1>
-      
+
+      <form className="bg-white p-6 rounded shadow-lg">
+        <input
+          type="text"
+          placeholder="Location"
+          className="border p-2 w-full mb-4"
+        />
+
+        <textarea
+          placeholder="Describe the incident"
+          className="border p-2 w-full mb-4"
+        />
+        
