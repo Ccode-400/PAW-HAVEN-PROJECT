@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // I'm using a simple functional component for the contact page
 const ContactPage = () => {
