@@ -25,3 +25,13 @@
   border: 1px solid #ccc;
   border-radius: 8px;
 }
+
+.report-form button {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 18px;
+}
