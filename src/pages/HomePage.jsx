@@ -51,3 +51,55 @@ export default HomePage;
           </div>
         </div>
       </section>
+      {/* Get Involved Section */}
+      <section>
+        <h2>Ways You Can Help</h2>
+        <p>Together we can build a brighter future for every animal in our care.</p>
+        <div>
+          <div>
+            <h3>Adopt / Foster</h3>
+            <p>Open your home to a pet in need — permanently or temporarily.</p>
+            <Link to="/adopt-now">Learn More</Link>
+          </div>
+          <div>
+            <h3>Volunteer</h3>
+            <p>Give your time to care for animals and support rescue operations.</p>
+            <Link to="/volunteer">Learn More</Link>
+          </div>
+          <div>
+            <h3>Donate</h3>
+            <p>Your contribution funds food, shelter, and medical care for our animals.</p>
+            <Link to="/donate-now">Learn More</Link>
+          </div>
+          <div>
+            <h3>Report a Case</h3>
+            <p>Witnessed animal abuse or a stray in distress? Let us know.</p>
+            <Link to="/report-case">Report Now</Link>
+          </div>
+        </div>
+      </section>
+      import { Link } from "react-router-dom";
+import PetCard from "../components/PetCard";
+
+const featuredPets = [
+  { id: 1, name: "Buddy", type: "Dog", breed: "Labrador", age: "2 years", image: "" },
+  { id: 2, name: "Luna", type: "Cat", breed: "Tabby", age: "1 year", image: "" },
+  { id: 3, name: "Max", type: "Dog", breed: "Beagle", age: "3 years", image: "" },
+  { id: 4, name: "Mia", type: "Cat", breed: "Siamese", age: "2 years", image: "" },
+  { id: 5, name: "Charlie", type: "Dog", breed: "Poodle", age: "4 years", image: "" },
+  { id: 6, name: "Bella", type: "Cat", breed: "Persian", age: "1 year", image: "" },
+];
+{/* Featured Pets Section */}
+      <section>
+        <h2>Looking for a New Best Friend?</h2>
+        <p>
+          Every day, animals arrive at Paw Haven hoping for a second chance.
+          Here are some of the wonderful pets currently waiting for a loving home.
+        </p>
+        <div>
+          {featuredPets.map((pet) => (
+            <PetCard key={pet.id} pet={pet} />
+          ))}
+        </div>
+        <Link to="/adopt-now">See All Adoptable Pets</Link>
+      </section>
