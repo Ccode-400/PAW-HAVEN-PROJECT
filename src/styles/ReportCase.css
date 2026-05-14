@@ -3,3 +3,10 @@
   margin: 50px auto;
   padding: 30px;
 }
+
+.report-container h1 {
+  text-align: center;
+  color: #1d4ed8;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
