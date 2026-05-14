@@ -35,3 +35,7 @@
   border-radius: 8px;
   font-size: 18px;
 }
+
+.report-form button:hover {
+  background-color: #b91c1c;
+}
