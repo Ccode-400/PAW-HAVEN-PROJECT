@@ -1,3 +1,5 @@
+import "../styles/AboutUs.css";
+
 const AboutUs = () => {
   return (
     <div className="bg-white font-sans text-gray-800">

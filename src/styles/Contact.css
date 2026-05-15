@@ -1,0 +1,89 @@
+.contact-container {
+  background: #f4f8ff;
+  min-height: 100vh;
+}
+
+.bg-orange-500 {
+  background: #f97316;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-4xl {
+  font-size: 48px;
+}
+
+.font-extrabold {
+  font-weight: 900;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.max-w-5xl {
+  max-width: 1100px;
+}
+
+.grid {
+  display: grid;
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.gap-10 {
+  gap: 40px;
+}
+
+.bg-white {
+  background: white;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.rounded-lg {
+  border-radius: 12px;
+}
+
+.border-gray-200 {
+  border: 1px solid #e5e7eb;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.border-2 {
+  border: 2px solid #d1d5db;
+}
+
+.focus\:border-green-600:focus {
+  border-color: #16a34a;
+}
+
+.bg-green-600 {
+  background: #16a34a;
+}
+
+.hover\:bg-green-700:hover {
+  background: #15803d;
+}
+
+.bg-gray-50 {
+  background: #f9fafb;
+}
+
+.border-orange-500 {
+  border-left: 4px solid #f97316;
+}
