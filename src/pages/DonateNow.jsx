@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/DonateNow.css";
 
 const Donate = () => {
   const tiers = [
