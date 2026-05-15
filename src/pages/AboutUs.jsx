@@ -3,7 +3,7 @@ const AboutUs = () => {
     <div className="bg-white font-sans text-gray-800">
       {/* Hero Section */}
       <section className="relative bg-green-700 text-white py-20 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">About KSPCA</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">About PAW HAVEN RESCUE</h1>
         <p className="text-xl max-w-2xl mx-auto leading-relaxed">
           For over a century, we've been the voice for Kenya's animals—rescuing the vulnerable, 
           fighting cruelty, and building a country where every wag, purr, and neigh matters.

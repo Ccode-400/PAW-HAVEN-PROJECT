@@ -1,11 +1,10 @@
 import React from 'react';
-import { Heart, Dog, Clock } from 'lucide-react'; // Optional: Install lucide-react
 
 const Volunteer = () => {
   const roles = [
-    { title: "Dog Walker", desc: "Get some steps in with our high-energy pups.", icon: <Dog size={24} /> },
-    { title: "Cat Cuddler", desc: "Help socialize our shyest felines with some love.", icon: <Heart size={24} /> },
-    { title: "Event Helper", desc: "Help us run adoption days and community events.", icon: <Clock size={24} /> },
+    { title: "Dog Walker", desc: "Get some steps in with our high-energy pups."}, 
+    { title: "Cat Cuddler", desc: "Help socialize our shyest felines with some love."}, 
+    { title: "Event Helper", desc: "Help us run adoption days and community events."},
   ];
 
   return (
