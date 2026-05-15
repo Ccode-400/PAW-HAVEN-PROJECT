@@ -1,5 +1,6 @@
 .adopt-page {
   padding: 40px;
+  background-color: #f4f8ff;
 }
 
 .adopt-header {
@@ -21,4 +22,5 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
+  margin-top: 40px;
 }

@@ -5,9 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar">
     <h1 className="logo">Paw Haven Rescue</h1>
-    <div className="nav-content">
       
-
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/adopt">Adopt</Link>
@@ -17,7 +15,6 @@ function Navbar() {
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
       </div>
-    </div>
     </nav>
   );
 }

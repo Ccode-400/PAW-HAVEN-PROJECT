@@ -11,9 +11,7 @@ import ReportCase from "./pages/ReportCase";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 
-
 function App() {
-  
   return (
     <div>
       <Navbar />
@@ -34,4 +32,3 @@ function App() {
 }
 
 export default App;
-   

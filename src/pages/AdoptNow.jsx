@@ -8,11 +8,17 @@ function AdoptNow() {
 
   // Fetch pets from db.json
   useEffect(() => {
-    fetch("http://localhost:3000/pets")
-      .then((res) => res.json())
-      .then((data) => setPets(data))
-      .catch((error) => console.log(error));
-  }, []);
+  fetch("http://localhost:3000/pets")
+    .then((res) => {
+      console.log("FETCH RESPONSE:", res);
+      return res.json();
+    })
+    .then((data) => {
+      console.log("FETCH DATA:", data);
+      setPets(data);
+    })
+    .catch((error) => console.log("FETCH ERROR:", error));
+}, []);
 
   // Add new pet
   function handleAddPet(newPet) {
@@ -33,11 +39,12 @@ function AdoptNow() {
   function handleDelete(id) {
     fetch(`http://localhost:3000/pets/${id}`, {
       method: "DELETE",
-    });
+    }).then(() => {
 
     const updatedPets = pets.filter((pet) => pet.id !== id);
 
     setPets(updatedPets);
+    });
   }
 
   return (
@@ -51,7 +58,7 @@ function AdoptNow() {
       </div>
 
       <PetForm onAddPet={handleAddPet} />
-
+      <h2>{pets.length} Pets Loaded</h2>
       <div className="pets-grid">
         {pets.map((pet) => (
           <PetCard

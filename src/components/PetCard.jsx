@@ -4,8 +4,13 @@ function PetCard({ pet, onDelete }) {
   return (
     <div className="pet-card">
       <img
-        src={pet.image_url}
+        src={`${pet.image_url}?w=400&t=${Date.now()}`}
         alt={pet.pet_name}
+        className="pet-image"
+        onError={(e) => {
+          e.target.src =
+          "https://placehold.co/400x300?text=Pet+Image";
+      }}
       />
 
       <div className="pet-info">

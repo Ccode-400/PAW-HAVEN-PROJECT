@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
 import PetCard from "../components/PetCard";
 
-const featuredPets = [
-  { id: 1, name: "Buddy", type: "Dog", breed: "Labrador", age: "2 years", image: "" },
-  { id: 2, name: "Luna", type: "Cat", breed: "Tabby", age: "1 year", image: "" },
-  { id: 3, name: "Max", type: "Dog", breed: "Beagle", age: "3 years", image: "" },
-  { id: 4, name: "Mia", type: "Cat", breed: "Siamese", age: "2 years", image: "" },
-  { id: 5, name: "Charlie", type: "Dog", breed: "Poodle", age: "4 years", image: "" },
-  { id: 6, name: "Bella", type: "Cat", breed: "Persian", age: "1 year", image: "" },
-];
 
 function HomePage() {
   return (
@@ -77,20 +69,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Featured Pets Section */}
-      <section>
-        <h2>Looking for a New Best Friend?</h2>
-        <p>
-          Every day, animals arrive at Paw Haven hoping for a second chance.
-          Here are some of the wonderful pets currently waiting for a loving home.
-        </p>
-        <div>
-          {featuredPets.map((pet) => (
-            <PetCard key={pet.id} pet={pet} />
-          ))}
-        </div>
-        <Link to="/adopt">See All Adoptable Pets</Link>
-      </section>
+
 
       {/* Join the Community Section */}
       <section>

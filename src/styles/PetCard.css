@@ -3,7 +3,6 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
 }
 
 .pet-card:hover {
@@ -17,7 +16,7 @@
 }
 
 .pet-info {
-  padding: 20px;
+  padding: 15px;
 }
 
 .pet-info h2 {
@@ -40,8 +39,9 @@
   border: none;
   padding: 10px;
   width: 100%;
-  border-radius: 8px;
-  margin-top: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .delete-btn:hover {
