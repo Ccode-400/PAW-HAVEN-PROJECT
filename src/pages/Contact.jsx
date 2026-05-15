@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "../styles/Contact.css";
 
 // I'm using a simple functional component for the contact page
 const ContactPage = () => {
