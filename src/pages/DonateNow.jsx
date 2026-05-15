@@ -2,9 +2,9 @@ import React from 'react';
 
 const Donate = () => {
   const tiers = [
-    { amount: "$25", label: "Fill a Bowl", impact: "Provides a week of nutritious meals for one dog." },
-    { amount: "$50", label: "Vaccine Hero", impact: "Covers essential shots for a newly rescued kitten." },
-    { amount: "$100", label: "The Works", impact: "Covers a full vet check-up and microchipping." },
+    { amount: "6500ksh", label: "Fill a Bowl", impact: "Provides a week of nutritious meals for one dog." },
+    { amount: "6500ksh", label: "Vaccine Hero", impact: "Covers essential shots for a newly rescued kitten." },
+    { amount: "13000ksh", label: "The Works", impact: "Covers a full vet check-up and microchipping." },
   ];
 
   return (
@@ -34,7 +34,7 @@ const Donate = () => {
           <div className="flex gap-2">
             <input 
               type="number" 
-              placeholder="Amount $" 
+              placeholder="Amount ksh" 
               className="p-3 rounded-lg border-none focus:ring-2 focus:ring-blue-400 outline-none w-32"
             />
             <button className="bg-gray-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-black transition-all">
