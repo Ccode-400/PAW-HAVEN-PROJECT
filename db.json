@@ -305,22 +305,6 @@
       "owner_address": "Migori, Kenya"
     },
     {
-      "id": "20",
-      "image_url": "https://unsplash.com/photos/dog-laying-on-area-rug-gxyfJQg7Lno",
-      "pet_name": "Thor",
-      "pet_type": "Dog",
-      "breed": "Pitbull",
-      "age": "3 years",
-      "gender": "Male",
-      "vaccinated": true,
-      "spayed_neutered": true,
-      "adoption_fee": 155,
-      "adoption_date": "2026-05-20",
-      "owner_name": "Mark Kibet",
-      "owner_email": "markkibet@gmail.com",
-      "owner_address": "Nairobi, Kenya"
-    },
-    {
       "image_url": "https://images.unsplash.com/photo-1517849845537-4d257902454a",
       "pet_name": "milo",
       "pet_type": "dog",
