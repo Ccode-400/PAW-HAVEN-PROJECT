@@ -1,22 +1,6 @@
 {
   "pets": [
     {
-      "id": "1",
-      "image_url": "https://images.unsplash.com/photo-1517849845537-4d257902454a",
-      "pet_name": "Bella",
-      "pet_type": "Dog",
-      "breed": "Golden Retriever",
-      "age": "2 years",
-      "gender": "Female",
-      "vaccinated": true,
-      "spayed_neutered": true,
-      "adoption_fee": 150,
-      "adoption_date": "2026-05-01",
-      "owner_name": "John Kamau",
-      "owner_email": "johnkamau@gmail.com",
-      "owner_address": "Nairobi, Kenya"
-    },
-    {
       "id": "2",
       "image_url": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8",
       "pet_name": "Max",
