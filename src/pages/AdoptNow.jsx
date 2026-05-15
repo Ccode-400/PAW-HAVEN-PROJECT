@@ -4,7 +4,24 @@ import PetForm from "../components/PetForm";
 import "../styles/AdoptNow.css";
 
 function AdoptNow() {
+  const [searchTerm, setSearchTerm] = useState("");
   const [pets, setPets] = useState([]);
+
+  const filteredPets = pets.filter((pet) => {
+  return (
+    pet.pet_name
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase()) ||
+
+    pet.pet_type
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase()) ||
+
+    pet.breed
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase())
+  );
+});
 
   // Fetch pets from db.json
   useEffect(() => {
@@ -58,9 +75,23 @@ function AdoptNow() {
       </div>
 
       <PetForm onAddPet={handleAddPet} />
-      <h2>{pets.length} Pets Loaded</h2>
+
+        <div className="search-container">
+
+          <input
+            type="text"
+            placeholder="Search by name, type, or breed..."
+            value={searchTerm}
+            onChange={(e) =>
+              setSearchTerm(e.target.value)
+            }
+            className="search-input"
+          />
+
+        </div>
+
       <div className="pets-grid">
-        {pets.map((pet) => (
+        {filteredPets.map((pet) => (
           <PetCard
             key={pet.id}
             pet={pet}

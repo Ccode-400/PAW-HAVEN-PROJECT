@@ -24,3 +24,29 @@
   gap: 30px;
   margin-top: 40px;
 }
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.search-input {
+  width: 400px;
+  max-width: 90%;
+
+  padding: 14px;
+
+  border: 2px solid #2563eb;
+  border-radius: 10px;
+
+  font-size: 16px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #1d4ed8;
+
+  box-shadow:
+    0 0 5px rgba(37, 99, 235, 0.4);
+}
